@@ -1,21 +1,21 @@
 const { randomize } = require("./utils.js")
 
-const createRivers = () => {
+const createRiver = () => {
     const rivers = Math.floor(Math.random() * 3) + 1
     return rivers
 }
 
-const createMountains = () => {
+const createMountain = () => {
     const mountains = Math.floor(Math.random() * 2) + 1
-    return mauntains
+    return mountains
 }
 
-const createForests = () => {
+const createForest = () => {
     const forests = Math.floor(Math.random() * 2) + 1
     return forests
 }
 
-const createPlains = () => {
+const createPlain = () => {
     const plains = Math.floor(Math.random() * 4) + 1
     return plains
 }
@@ -38,7 +38,7 @@ const journeyMaker = () => {
         journey.push("forest")
     }
 
-    for (let mountainNumber = 0; mountainNumber < areas.mountain; mountainNumber++) {
+    for (let mountainNumber = 0; mountainNumber < areas.mountains; mountainNumber++) {
         journey.push("mountain")
     }
 
@@ -50,6 +50,6 @@ const journeyMaker = () => {
 }
 
 module.exports = {
-    createRivers, createForests,
-    createMountains, createPlains
+    createRiver, createForest,
+    createMountain, createPlain, journeyMaker
 }

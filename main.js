@@ -2,7 +2,7 @@ const { roundup } = require("./cattle.js")
 const { hireDrovers } = require("./drovers.js")
 const { journeyMaker } = require("./journey.js")
 
-const cattleToDrive = 50
+let cattleToDrive = 50
 const drovers = hireDrovers(cattleToDrive)
 const cattle = roundup(cattleToDrive)
 const journey = journeyMaker()
